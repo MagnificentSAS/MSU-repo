@@ -7,5 +7,5 @@ match int(input()):
         print("TRI")
     case var if var % 2 == 0:
         print(var, "is ЧЕТНОЕ")
-    case _:
-        print("MNOgO")
+    case n:
+        print(n, "is MNOgO")
