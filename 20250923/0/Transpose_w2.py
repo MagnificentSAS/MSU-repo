@@ -11,3 +11,6 @@ if all([len(l) == len(list) for l in list]):
 
     for i in list:
         print(*i)
+
+else:
+    print("not square")
