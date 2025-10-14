@@ -1,3 +1,5 @@
+import timeit
+
 def letter_counter(str):
     a = set()
     b = set()
@@ -9,5 +11,7 @@ def letter_counter(str):
 
     return len(a), len(b)
 
-# str = input()
+str = input()
 # print(*letter_counter(str))
+t = timeit.Timer("letter_counter(str)", globals=globals())
+print(t.autorange())
