@@ -3,3 +3,5 @@ def sum_gen(n):
     curr = 0.0
     while curr <= n:
         yield (sum := sum + 1 / (curr := curr + 1.0) / curr)
+
+generated = sum(1/i/i for i in range(1, 10001))
