@@ -31,5 +31,9 @@ class Rectangle:
     def __mul__(self, num):
         return self.__class__(self.x1 * num, self.y1 * num, self.x2 * num, self.y2 * num)
 
-    def __rmul__(self, num):
-        return self.__class__(self.x1 * num, self.y1 * num, self.x2 * num, self.y2 * num)
+    __rmul__ = __mul__
+
+    def __getitem__(self, idx):
+        tuple = ((self.x1, self.y1), (self.x1, self.y2), (self.x2, self.y2), (self.x2, self.y1))
+        return tuple[idx % 4]
+
