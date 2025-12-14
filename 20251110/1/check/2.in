@@ -1,0 +1,7 @@
+a = DivStr("abcdefgh")
+
+parts = list(a // 3)
+r = a % 3
+
+print(*parts)
+print(r)

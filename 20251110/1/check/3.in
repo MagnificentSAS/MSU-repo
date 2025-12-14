@@ -1,0 +1,7 @@
+a = DivStr("abc")
+
+parts = list(a // 5)
+r = a % 5
+
+print(*parts)
+print(r)
