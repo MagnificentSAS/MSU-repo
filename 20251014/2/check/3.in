@@ -1,0 +1,10 @@
+:const  42
+const
+:len1 s len(s)
+len1 "abc def"
+:mul x y x*y
+mul 6 7
+:lin4 a b c d a+b+c+d
+lin4 1 2 3 4
+quit "{}:{}"
+

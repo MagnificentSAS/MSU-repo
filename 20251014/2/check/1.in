@@ -1,0 +1,10 @@
+:zero  0
+:echo x x
+:add  x y x+y
+:poly a b c x a*x*x+b*x+c
+zero
+echo  "Привет, мир"
+add  2  3
+poly 1 0 -1 2
+quit "{}:{}"
+
