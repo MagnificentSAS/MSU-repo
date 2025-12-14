@@ -1,0 +1,13 @@
+@objcount
+class A:
+    def __init__(self):
+        print(1)
+
+    def __del__(self):
+        print(2)
+
+x = A()
+y = A()
+print(A.counter)
+x = None
+print(A.counter)

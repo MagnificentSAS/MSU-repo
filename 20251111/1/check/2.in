@@ -1,0 +1,24 @@
+@objcount
+class TestClassWithInit:
+    def __init__(self, value):
+        self.value = value
+    
+    def __del__(self):
+        pass
+
+@objcount
+class TestClass:
+    pass
+
+print(TestClass.counter)
+a = TestClass()
+print(TestClass.counter)
+b = TestClass()
+c = TestClassWithInit(42)
+print(TestClass.counter)
+print(TestClassWithInit.counter)
+del a
+print(TestClass.counter)
+del b, c
+print(TestClass.counter)
+print(TestClassWithInit.counter) 
