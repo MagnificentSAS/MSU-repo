@@ -1,0 +1,1 @@
+print(*list(slide(list(reversed(range(5))), 3)))
