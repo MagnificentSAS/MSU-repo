@@ -1,0 +1,8 @@
+a, b = Omnibus(), Omnibus()
+a.kl = 123
+a.bl = 321
+b.bl = 10005000
+b.s = "NO"
+print (a.kl, a.bl, b.bl, b.s)
+del a.bl, b.s
+print(b.bl, b.s)

@@ -1,0 +1,5 @@
+a = Omnibus()
+del a.k
+a.__setattr__("1", "a")
+print(a.__getattr__("1"))
+print(a.__getattr__("2"))
