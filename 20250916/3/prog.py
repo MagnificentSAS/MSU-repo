@@ -19,5 +19,5 @@ for i in range(3):
                 break
         else:
             # print(s, '<=6')
-            print(res if s != 6 else '=)', end = ' ' if j < 2 else '\n')
+            print(res if s != 6 else ':=)', end = ' ' if j < 2 else '\n')
 # print()
