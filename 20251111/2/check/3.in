@@ -1,0 +1,13 @@
+class A:
+    x = Num()
+
+a = A()
+b = A()
+c = A()
+
+a.x = range(0, 50, 5)
+b.x = (1, 2, 3)
+c.x = 9.99
+
+print(a.x, b.x, c.x)
+print(a.x + b.x + c.x)

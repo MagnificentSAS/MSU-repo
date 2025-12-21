@@ -1,0 +1,7 @@
+class A:
+    num = Num()
+a = A()
+a.num = [1, 2, 3]
+print(a.num)
+a.num = "hello"
+print(a.num)
