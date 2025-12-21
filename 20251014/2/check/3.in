@@ -6,5 +6,5 @@ len1 "abc def"
 mul 6 7
 :lin4 a b c d a+b+c+d
 lin4 1 2 3 4
-quit "{}:{}"
+quit "{}, {}"
 

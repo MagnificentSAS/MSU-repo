@@ -5,9 +5,11 @@ MATH_ENV = {name: getattr(math, name) for name in dir(math)}
 
 def run_interpreter(lines):
     functions = {}
-    def quit_func(fmt, *, stats):
+    def quit_func(fmt, form, stats):
+        l = form[0].split("{}")
+
         defined_cnt, line_cnt = stats
-        print(f"{defined_cnt}, {line_cnt}")
+        print(l[0][1:], defined_cnt, l[1], line_cnt, l[2][:-1], sep='')
         return "__QUIT__"
 
     functions['quit'] = (['fmt'], None)
@@ -49,7 +51,7 @@ def run_interpreter(lines):
                 raise TypeError(f"{name} expects {len(params)} args, got {len(args)}")
 
             if name == 'quit':
-                result = quit_func(args[0], stats=(defined_count, processed_lines))
+                result = quit_func(args[0], args, stats=(defined_count, processed_lines))
                 if result == "__QUIT__":
                     break
             else:
